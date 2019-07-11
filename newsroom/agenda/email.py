@@ -42,7 +42,7 @@ def send_agenda_notification_email(user, agenda, message, subject, original_agen
             to=[user['email']],
             subject=subject,
             text_body=render_template('agenda_updated_email.txt', **kwargs),
-            html_body=render_template('agenda_updated_email.html', **kwargs)
+            # html_body=render_template('agenda_updated_email.html', **kwargs)
         )
 
 
