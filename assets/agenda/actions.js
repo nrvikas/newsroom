@@ -152,7 +152,7 @@ export function copyPreviewContents(item) {
 
         item.name && contents.push(item.name);
         item.name && contents.push(gettext('Dates: {{ dates }}', {dates: `${getLocaleDate(item.dates.start)} - ${getLocaleDate(item.dates.end)}`}));
-        hasLocation(item) && contents.push(gettext('Location: {{ location }}', {location: getLocationString(item)}));
+        hasLocation(item) && contents.push(gettext('Located: {{ location }}', {location: getLocationString(item)}));
         item.ednote && contents.push(gettext('Ednote: {{ ednote }}', {ednote: item.ednote}));
 
         if (item.definition_short) {
