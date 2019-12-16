@@ -18,7 +18,7 @@ import {
     topicEditorFullscreenSelector,
 } from 'user-profile/selectors';
 
-import WatchListEditor from 'search/components/WatchListEditor';
+import MonitoringEditor from 'search/components/MonitoringEditor';
 import TopicEditor from 'search/components/TopicEditor';
 import TopicList from 'search/components/TopicList';
 

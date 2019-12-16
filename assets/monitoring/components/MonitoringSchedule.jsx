@@ -9,7 +9,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import SelectInput from 'components/SelectInput';
 
-class WatchListSchedule extends React.Component {
+class MonitoringSchedule extends React.Component {
     constructor(props) {
         super(props);
         
@@ -200,7 +200,7 @@ class WatchListSchedule extends React.Component {
     }
 }
 
-WatchListSchedule.propTypes = {
+MonitoringSchedule.propTypes = {
     watchList: PropTypes.object,
     onsaveWatchListSchedule: PropTypes.func,
     onChange: PropTypes.func,
@@ -208,4 +208,4 @@ WatchListSchedule.propTypes = {
     readOnly: PropTypes.bool,
 };
 
-export default WatchListSchedule;
+export default MonitoringSchedule;

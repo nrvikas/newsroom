@@ -7,12 +7,12 @@ import EditPanel from 'components/EditPanel';
 import TextInput from 'components/TextInput';
 import CheckboxInput from 'components/CheckboxInput';
 import SelectInput from 'components/SelectInput';
-import WatchListSchedule from '../../watch-lists/components/WatchListSchedule';
+import MonitoringSchedule from '../../monitoring/components/MonitoringSchedule';
 
 import {fetchCompanyUsers} from 'companies/actions';
-import {postWatchList} from 'watch-lists/actions';
+import {postWatchList} from 'monitoring/actions';
 
-class WatchListEditor extends React.Component {
+class MonitoringEditor extends React.Component {
     constructor(props) {
         super(props);
 
@@ -236,7 +236,7 @@ class WatchListEditor extends React.Component {
     }
 }
 
-WatchListEditor.propTypes = {
+MonitoringEditor.propTypes = {
     watchList: PropTypes.object,
     closeEditor: PropTypes.func,
     onTopicChanged: PropTypes.func,
@@ -260,4 +260,4 @@ const mapDispatchToProps = (dispatch) => ({
     fetchCompanyUsers: (companyId) => dispatch(fetchCompanyUsers(companyId, true)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(WatchListEditor);
+export default connect(mapStateToProps, mapDispatchToProps)(MonitoringEditor);

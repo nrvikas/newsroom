@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WatchListItem from './WatchListItem';
+import MonitoringItem from './MonitoringItem';
 import { gettext } from 'utils';
 
 
-function WatchList({watchLists, onClick, activeWatchListId, companiesById}) {
+function MonitoringList({watchLists, onClick, activeWatchListId, companiesById}) {
     const list = watchLists.map((w) =>
         <WatchListItem
             key={w._id}
@@ -35,11 +35,11 @@ function WatchList({watchLists, onClick, activeWatchListId, companiesById}) {
     );
 }
 
-WatchList.propTypes = {
+MonitoringList.propTypes = {
     watchLists: PropTypes.array.isRequired,
     onClick: PropTypes.func.isRequired,
     activeWatchListId: PropTypes.string,
     companiesById: PropTypes.object,
 };
 
-export default WatchList;
+export default MonitoringList;

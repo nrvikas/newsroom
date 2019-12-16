@@ -13,7 +13,7 @@ import {
 
 import { RENDER_MODAL, CLOSE_MODAL, MODAL_FORM_VALID, MODAL_FORM_INVALID } from 'actions';
 import {GET_COMPANY_USERS} from 'companies/actions';
-import {SET_USER_COMPANY_WATCH_LISTS} from 'watch-lists/actions';
+import {SET_USER_COMPANY_WATCH_LISTS} from 'monitoring/actions';
 
 import {modalReducer} from 'reducers';
 import {GET_NAVIGATIONS} from 'navigations/actions';

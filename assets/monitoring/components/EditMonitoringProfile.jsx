@@ -10,13 +10,13 @@ import CheckboxInput from 'components/CheckboxInput';
 import EditPanel from '../../components/EditPanel';
 import AuditInformation from 'components/AuditInformation';
 
-import WatchListSchedule from './WatchListSchedule';
+import MonitoringSchedule from './MonitoringSchedule';
 
 import { gettext } from 'utils';
 
 const getCompanyOptions = (companies) => companies.map(company => ({value: company._id, text: company.name}));
 
-class EditWatchList extends React.Component {
+class EditMonitoringProfile extends React.Component {
     constructor(props) {
         super(props);
         this.handleTabClick = this.handleTabClick.bind(this);
@@ -213,7 +213,7 @@ class EditWatchList extends React.Component {
     }
 }
 
-EditWatchList.propTypes = {
+EditMonitoringProfile.propTypes = {
     item: PropTypes.object.isRequired,
     onChange: PropTypes.func,
     errors: PropTypes.object,
@@ -228,4 +228,4 @@ EditWatchList.propTypes = {
     saveWatchListSchedule: PropTypes.func,
 };
 
-export default EditWatchList;
+export default EditMonitoringProfile;

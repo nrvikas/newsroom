@@ -11,12 +11,12 @@ import {
     setCompany,
     toggleScheduleMode
 } from '../actions';
-import WatchListsPanel from './WatchListsPanel';
+import MonitoringPanel from './MonitoringPanel';
 import ListBar from 'components/ListBar';
 import DropdownFilter from 'components/DropdownFilter';
 
 
-class WatchListApp extends React.Component {
+class MonitoringApp extends React.Component {
     constructor(props, context) {
         super(props, context);
 
@@ -25,7 +25,7 @@ class WatchListApp extends React.Component {
         this.onSectionChange = this.onSectionChange.bind(this);
 
         this.sections = [
-            { name: gettext('Watch Lists') },
+            { name: gettext('List') },
             { name: gettext('Schedules') },
         ];
 
@@ -123,7 +123,7 @@ const mapStateToProps = (state) => ({
     watchListCompanies: state.watchListCompanies,
 });
 
-WatchListApp.propTypes = {
+MonitoringApp.propTypes = {
     users: PropTypes.arrayOf(PropTypes.object),
     activeQuery: PropTypes.string,
     companies: PropTypes.arrayOf(PropTypes.object),
@@ -149,4 +149,4 @@ const mapDispatchToProps = {
     toggleScheduleMode,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(WatchListApp);
+export default connect(mapStateToProps, mapDispatchToProps)(MonitoringApp);

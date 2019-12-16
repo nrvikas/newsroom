@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {watchListsList} from '../selectors';
-import EditWatchList from './EditWatchList';
-import WatchList from './WatchList';
+import EditMonitoringProfile from './EditMonitoringProfile';
+import MonitoringList from './MonitoringList';
 import {
     deleteWatchList,
     updateWatchList,
@@ -18,7 +18,7 @@ import {connect} from 'react-redux';
 import {fetchCompanyUsers} from '../../companies/actions';
 
 
-class WatchListsPanel extends React.Component {
+class MonitoringPanel extends React.Component {
     constructor(props, context) {
         super(props, context);
 
@@ -100,7 +100,7 @@ class WatchListsPanel extends React.Component {
     }
 }
 
-WatchListsPanel.propTypes = {
+MonitoringPanel.propTypes = {
     watchLists: PropTypes.arrayOf(PropTypes.object),
     watchListToEdit: PropTypes.object,
     updateWatchList: PropTypes.func,
@@ -142,4 +142,4 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch: dispatch,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(WatchListsPanel);
+export default connect(mapStateToProps, mapDispatchToProps)(MonitoringPanel);

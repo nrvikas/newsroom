@@ -4,7 +4,7 @@ import { gettext } from 'utils';
 import {get} from 'lodash';
 
 
-function WatchListItem({watchList, isActive, onClick, companiesById}) {
+function MonitoringItem({watchList, isActive, onClick, companiesById}) {
     return (
         <tr key={watchList._id}
             className={`${isActive?'table--selected':''}
@@ -20,11 +20,11 @@ function WatchListItem({watchList, isActive, onClick, companiesById}) {
     );
 }
 
-WatchListItem.propTypes = {
+MonitoringItem.propTypes = {
     watchList: PropTypes.object,
     isActive: PropTypes.bool,
     onClick: PropTypes.func,
     companiesById: PropTypes.object,
 };
 
-export default WatchListItem;
+export default MonitoringItem;

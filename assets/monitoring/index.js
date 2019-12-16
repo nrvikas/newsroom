@@ -4,7 +4,7 @@ import { createStore, render, getInitData, initWebSocket, closeItemOnMobile, isM
 import {getReadItems} from 'local-store';
 import watchListsReducer from './reducers';
 import WireApp from 'wire/components/WireApp';
-import WatchListApp from './components/WatchListApp';
+import MonitoringApp from './components/MonitoringApp';
 import { initViewData, fetchWatchLists } from './actions';
 import {
     fetchItems,
@@ -25,7 +25,7 @@ import {
 
 let store;
 
-if (get(window.viewData, 'context', '') === 'watch_lists') {
+if (get(window.viewData, 'context', '') === 'monitoring') {
     store = createStore(wireReducer, 'WatchLists');
     // init data
     store.dispatch(initData(getInitData(window.viewData), getReadItems(), false));
@@ -59,7 +59,7 @@ if (get(window.viewData, 'context', '') === 'watch_lists') {
 
     // fetch items & render
     store.dispatch(fetchItems()).then(() =>
-        render(store, WireApp, document.getElementById('watch_lists-app'),
+        render(store, WireApp, document.getElementById('monitoring-app'),
             {
                 addAllOption: false,
                 disableSameNavigationDeselect: true,
@@ -74,5 +74,5 @@ if (get(window.viewData, 'context', '') === 'watch_lists') {
         store.dispatch(initViewData(window.viewData));
         store.dispatch(fetchWatchLists());
     }
-    render(store, WatchListApp, document.getElementById('settings-app'));
+    render(store, MonitoringApp, document.getElementById('settings-app'));
 }
